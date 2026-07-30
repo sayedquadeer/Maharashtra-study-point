@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="mr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharashtra Study Point | Urdu & Marathi Medium Notes</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Maharashtra State Board Study Material, Chapter-wise Questions & Answers for Class 5 to 10 in Urdu and Marathi Medium.">
+    <meta name="keywords" content="Maharashtra State Board, Urdu Medium Notes, Marathi Medium Notes, Class 10 Urdu, Class 9 Marathi, Chapter Q&A, Maharashtra Study Point">
+    <meta name="author" content="Maharashtra Study Point">
+
+    <!-- Fonts: Google Fonts (Noto Nastaliq Urdu for Urdu & Poppins for General UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --card-border: rgba(255, 255, 255, 0.15);
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #06b6d4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* Urdu Specific Style */
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif !important;
+            direction: rtl !important;
+            text-align: right;
+            line-height: 2.2;
+        }
+
+        /* Glassmorphism Header */
+        header {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-box input {
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .search-box input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+            width: 280px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* AdSense Banners */
+        .ads-banner {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 20px 0;
+        }
+
+        /* Filter Controls */
+        .filter-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-title {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-filter:hover, .btn-filter.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+        }
+
+        select.select-filter {
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: #1e1b4b;
+            color: white;
+            border: 1px solid var(--card-border);
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Chapter Cards Layout */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .chapter-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .chapter-header {
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .chapter-header h3 {
+            color: #38bdf8;
+            font-size: 1.2rem;
+        }
+
+        /* Accordion Styling */
+        .qa-accordion {
+            margin-top: 10px;
+        }
+
+        .accordion-item {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-btn {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-light);
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0 12px;
+        }
+
+        .accordion-content.open {
+            padding: 12px;
+            max-height: 500px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--card-border);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-box input {
+                width: 100%;
+            }
+            .search-box input:focus {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header>
+        <div class="logo">Maharashtra Study Point</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="filterContent()" placeholder="Search Chapter or Q&A...">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Header AdSense Ready Banner -->
+        <div class="ads-banner">
+            <p>[ Google AdSense Banner Area - Responsive Header Ad ]</p>
+        </div>
+
+        <!-- Dynamic Filter Section -->
+        <div class="filter-section">
+            
+            <!-- 1. Medium Selection -->
+            <div class="filter-group">
+                <span class="filter-title">Select Medium:</span>
+                <div class="btn-group">
+                    <button class="btn-filter active" onclick="setMedium('urdu', this)">Urdu Medium (اردو)</button>
+                    <button class="btn-filter" onclick="setMedium('marathi', this)">Marathi Medium (मराठी)</button>
+                </div>
+            </div>
+
+            <!-- 2. Class / Standard Filter -->
+            <div class="filter-group">
+                <span class="filter-title">Select Standard:</span>
+                <div class="btn-group" id="stdButtons">
+                    <!-- Standard buttons generated via JS -->
+                </div>
+            </div>
+
+            <!-- 3. Subject Selection -->
+            <div class="filter-group">
+                <span class="filter-title">Select Subject:</span>
+                <select class="select-filter" id="subjectSelect" onchange="renderChapters()">
+                    <!-- Options generated via JS -->
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Content Display Area -->
+        <main class="chapters-grid" id="chaptersContainer">
+            <!-- Dynamic Chapter Cards with Q&A Accordions will load here -->
+        </main>
+
+        <!-- In-Between Content AdSense Banner -->
+        <div class="ads-banner">
+            <p>[ Google AdSense In-Feed Ad Placeholder ]</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maharashtra Study Point. All Rights Reserved. Designed for Board Students.</p>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Sample Data Structure
+        const dbData = {
+            urdu: {
+                standards: [5, 6, 7, 8, 9, 10],
+                subjects: {
+                    10: ["Science & Tech", "Mathematics", "Urdu Literature"],
+                    9: ["Science", "Mathematics", "Social Science"]
+                },
+                chapters: {
+                    "10_Science & Tech": [
+                        {
+                            title: "سبق 1: توارث اور ارتقاء (Heredity and Evolution)",
+                            qa: [
+                                { q: "سوال: توارث کی تعریف کیجیے۔", a: "جواب: حیاتیاتی خصوصیات کا ایک نسل سے دوسری نسل میں منتقل ہونا توارث کہلاتا ہے۔" },
+                                { q: "سوال: ڈی این اے کا مکمل نام کیا ہے؟", a: "جواب: ڈی آکسی رائبو نیوکلیک ایسڈ (Deoxyribonucleic Acid)۔" }
+                            ]
+                        }
+                    ],
+                    "10_Mathematics": [
+                        {
+                            title: "سبق 1: دو متغیری خطی مساواتیں",
+                            qa: [
+                                { q: "سوال: خطی مساوات کی عام صورت کیا ہے؟", a: "جواب: ax + by + c = 0" }
+                            ]
+                        }
+                    ]
+                }
+            },
+            marathi: {
+                standards: [5, 6, 7, 8, 9, 10],
+                subjects: {
+                    10: ["विज्ञान आणि तंत्रज्ञान", "गणित", "मराठी सुगमभारती"],
+                    9: ["विज्ञान", "गणित", "सामाजिक शास्त्रे"]
+                },
+                chapters: {
+                    "10_विज्ञान आणि तंत्रज्ञान": [
+                        {
+                            title: "पाठ १: आनुवंशिकता व उत्क्रांती",
+                            qa: [
+                                { q: "प्रश्न: आनुवंशिकता म्हणजे काय?", a: "उत्तर: एका पिढीतील जैविक लक्षणे जनुकांद्वारे दुसऱ्या पिढीत संक्रमित होण्याची प्रक्रिया म्हणजे आनुवंशिकता होय." },
+                                { q: "प्रश्न: DNA चे पूर्ण नाव काय आहे?", a: "उत्तर: डीऑक्सीरायबो न्यूक्लिक ॲसिड (Deoxyribonucleic Acid)." }
+                            ]
+                        }
+                    ],
+                    "10_गणित": [
+                        {
+                            title: "पाठ १: दोन चलांतील रेषीय समीकरणे",
+                            qa: [
+                                { q: "प्रश्न: रेषीय समीकरणाचे सामान्य रूप लिहा.", a: "उत्तर: ax + by + c = 0" }
+                            ]
+                        }
+                    ]
+                }
+            }
+        };
+
+        let currentMedium = 'urdu';
+        let currentStd = 10;
+
+        // Initialize App
+        function initApp() {
+            renderStdButtons();
+            updateSubjects();
+        }
+
+        // Switch Medium
+        function setMedium(medium, btn) {
+            currentMedium = medium;
+            document.querySelectorAll('.filter-group:nth-child(1) .btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            renderStdButtons();
+            updateSubjects();
+        }
+
+        // Render Standard Buttons
+        function renderStdButtons() {
+            const container = document.getElementById('stdButtons');
+            container.innerHTML = '';
+            const stds = dbData[currentMedium].standards;
+
+            stds.forEach(std => {
+                const button = document.createElement('button');
+                button.className = `btn-filter ${std === currentStd ? 'active' : ''}`;
+                button.innerText = `Std ${std}`;
+                button.onclick = () => {
+                    currentStd = std;
+                    document.querySelectorAll('#stdButtons .btn-filter').forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                    updateSubjects();
+                };
+                container.appendChild(button);
+            });
+        }
+
+        // Update Subjects Dropdown
+        function updateSubjects() {
+            const subjectSelect = document.getElementById('subjectSelect');
+            subjectSelect.innerHTML = '';
+
+            const subjects = dbData[currentMedium].subjects[currentStd] || ["No Subjects Found"];
+            subjects.forEach(sub => {
+                const opt = document.createElement('option');
+                opt.value = sub;
+                opt.innerText = sub;
+                subjectSelect.appendChild(opt);
+            });
+
+            renderChapters();
+        }
+
+        // Render Chapters & Q&A Cards
+        function renderChapters() {
+            const container = document.getElementById('chaptersContainer');
+            container.innerHTML = '';
+
+            const selectedSubject = document.getElementById('subjectSelect').value;
+            const key = `${currentStd}_${selectedSubject}`;
+            const chapterList = dbData[currentMedium].chapters[key] || [];
+
+            if (chapterList.length === 0) {
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px;">No study material uploaded yet for this combination.</div>`;
+                return;
+            }
+
+            const isUrdu = currentMedium === 'urdu';
+
+            chapterList.forEach((chap, cIdx) => {
+                const card = document.createElement('div');
+                card.className = `chapter-card ${isUrdu ? 'urdu-text' : ''}`;
+
+                let qaHTML = '';
+                chap.qa.forEach((qa, qIdx) => {
+                    qaHTML += `
+                        <div class="accordion-item">
+                            <button class="accordion-btn ${isUrdu ? 'urdu-text' : ''}" onclick="toggleAccordion(this)">
+                                <span>${qa.q}</span>
+                                <span>▼</span>
+                            </button>
+                            <div class="accordion-content ${isUrdu ? 'urdu-text' : ''}">
+                                <p style="padding-top:8px;">${qa.a}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="chapter-header">
+                        <h3>${chap.title}</h3>
+                    </div>
+                    <div class="qa-accordion">
+                        ${qaHTML}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Toggle Accordion Functionality
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            content.classList.toggle('open');
+        }
+
+        // Simple Search Filter
+        function filterContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.chapter-card');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Start App on load
+        window.onload = initApp;
+    </script>
+</body>
+</html>
+
