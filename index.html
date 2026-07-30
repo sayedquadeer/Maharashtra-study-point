@@ -45,351 +45,573 @@
           "@type": "EducationalOrganization",
           "@id": "https://maharashtrastudypoint.in/#organization",
           "name": "Maharashtra Study Point",
-          "url": "https://maharashtrastudypoint.in/",
-          "logo": "https://maharashtrastudypoint.in/assets/logo.png",
-          "description": "Premier educational platform for Maharashtra Board Urdu Medium Students."
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://maharashtrastudypoint.in/#website",
-          "url": "https://maharashtrastudypoint.in/",
-          "name": "Maharashtra Study Point",
-          "publisher": { "@id": "https://maharashtrastudypoint.in/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://maharashtrastudypoint.in/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://maharashtrastudypoint.in/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://maharashtrastudypoint.in/"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://maharashtrastudypoint.in/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Are these notes updated according to the latest Maharashtra Board syllabus?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, all study materials, PDFs, and MCQs are regularly updated according to the latest syllabus issued by the Maharashtra State Board."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are all resources completely free to download?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, Maharashtra Study Point offers 100% free downloadable PDF notes and online test series for all Urdu medium students."
-              }
-            }
-          ]
-        }
-      ]
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Maharashtra Study Point | Maharashtra Board Urdu Medium Notes &amp; Papers</title>
+    <meta name="title" content="Maharashtra Study Point | Maharashtra Board Urdu Medium Notes &amp; Papers">
+    <meta name="description" content="Free Maharashtra Board Urdu Medium study portal with chapter-wise notes, MCQs, previous year papers, SSC preparation, exam updates and study resources.">
+    <meta name="keywords" content="Maharashtra Study Point, Maharashtra Board Urdu Medium, SSC Urdu Medium, Class 7, Class 8, Class 9, Class 10 Urdu Medium">
+    <meta name="author" content="Maharashtra Study Point">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Maharashtra Study Point",
+      "url": "https://edquadeer.github.io/",
+      "description": "Educational platform providing free study material for Maharashtra Board Urdu Medium students."
     }
     </script>
-</head>
-<body>
 
-    <!-- Header / Navbar -->
-    <header class="navbar-header" id="header">
-        <div class="container nav-container">
-            <a href="/" class="brand-logo" aria-label="Maharashtra Study Point Home">
-                <i class="fa-solid fa-graduation-cap logo-icon"></i>
-                <div class="logo-text">
-                    <span class="logo-title">MS Point</span>
-                    <span class="logo-subtitle urdu-font">مہاراشٹرا اسٹوڈی پوائنٹ</span>
-                </div>
-            </a>
+    <style>
+        /* ==========================================================================
+           COLOR PALETTE & DESIGN TOKENS
+           ========================================================================== */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #10b981 100%);
+            --hero-bg-gradient: radial-gradient(circle at top right, rgba(14, 165, 233, 0.15), rgba(16, 185, 129, 0.12), transparent 70%);
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f97316;
+            --accent-pink: #ec4899;
 
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="/" class="nav-link active">Home</a></li>
-                    <li><a href="/class-7" class="nav-link">Class 7</a></li>
-                    <li><a href="/class-8" class="nav-link">Class 8</a></li>
-                    <li><a href="/class-9" class="nav-link">Class 9</a></li>
-                    <li><a href="/ssc-class-10" class="nav-link">SSC Class 10</a></li>
-                    <li><a href="/updates" class="nav-link">Updates</a></li>
-                </ul>
-            </nav>
+            --bg-main: #f0f4f8;
+            --bg-card: rgba(255, 255, 255, 0.75);
+            --bg-card-hover: rgba(255, 255, 255, 0.95);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-glass: rgba(255, 255, 255, 0.8);
+            --shadow-glass: 0 10px 30px -5px rgba(0, 102, 204, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 20px 40px -10px rgba(2, 132, 199, 0.22);
 
-            <div class="header-actions">
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Open Navigation Menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+            --radius-xl: 24px;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
 
-    <!-- Breadcrumb Navigation -->
-    <div class="container">
-        <nav class="breadcrumb-container" aria-label="Breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-            </ol>
-        </nav>
-    </div>
+        [data-theme="dark"] {
+            --bg-main: #0b1329;
+            --bg-card: rgba(20, 31, 58, 0.7);
+            --bg-card-hover: rgba(28, 43, 78, 0.9);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --shadow-glass: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+            --shadow-hover: 0 20px 40px -10px rgba(16, 185, 129, 0.25);
+        }
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <span class="badge-pill"><i class="fa-solid fa-star"></i> #1 Educational Portal for Urdu Medium</span>
-                <h1 class="main-heading">Maharashtra Study Point – Maharashtra Board Urdu Medium Study Portal</h1>
-                <p class="hero-description">
-                    Empowering students from Class 7 to Class 10 (SSC) with top-quality chapter-wise notes, PDF books, practice MCQs, and past examination papers.
-                </p>
-                
-                <!-- Search Box -->
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Search chapters, subjects, notes (e.g., SSC Science Chapter 1)..." aria-label="Search study materials">
-                    <button class="btn btn-primary">Search</button>
-                </div>
+        /* ==========================================================================
+           GLOBAL BASE STYLES
+           ========================================================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-                <div class="hero-cta-group">
-                    <a href="#classes" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Select Class</a>
-                    <a href="#free-pdfs" class="btn btn-secondary-outline"><i class="fa-solid fa-file-pdf"></i> Download Free PDFs</a>
-                </div>
-            </div>
+        html { scroll-behavior: smooth; }
 
-            <div class="hero-illustration">
-                <div class="glass-card illustration-card">
-                    <div class="urdu-banner urdu-font">
-                        اردو میڈیم کے تمام طلباء کے لیے مکمل اور مفت تعلیمی مواد
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-num">100%</span>
-                            <span class="stat-label">Free Notes</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">Class 7-10</span>
-                            <span class="stat-label">Urdu Medium</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">MCQs</span>
-                            <span class="stat-label">Interactive Practice</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            background-image: var(--hero-bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
 
-    <!-- Section: Latest Education Updates -->
-    <section class="section updates-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Education Updates</h2>
-                <p>Stay informed with official Maharashtra Board news, timetables, and syllabus changes.</p>
-            </div>
-            <div class="updates-ticker glass-card">
-                <div class="ticker-badge"><i class="fa-solid fa-bullhorn"></i> NOTICES</div>
-                <ul class="ticker-list">
-                    <li><a href="/updates/ssc-board-exam-timetable">📢 Maharashtra Board SSC 2026 Timetable Released - Download PDF</a></li>
-                    <li><a href="/updates/class-9-urdu-syllabus">📚 Class 9 Urdu Medium Revised Question Paper Pattern Updated</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
 
-    <!-- Section: Choose Your Class -->
-    <section class="section classes-section" id="classes">
-        <div class="container">
-            <div class="section-header">
-                <h2>Maharashtra Board Urdu Medium Notes</h2>
-                <p>Select your class to access standard study materials and solutions.</p>
-            </div>
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-            <div class="grid grid-4">
-                <!-- Class 7 Card -->
-                <div class="glass-card class-card">
-                    <div class="card-badge bg-blue">Class 7</div>
-                    <h3>Class 7 Study Material</h3>
-                    <p class="urdu-font card-urdu">جماعت ہفتم - سوال و جواب اور نوٹس</p>
-                    <ul class="card-features">
-                        <li><i class="fa-solid fa-check text-green"></i> Chapter-wise Solutions</li>
-                        <li><i class="fa-solid fa-check text-green"></i> Science & Maths Guides</li>
-                    </ul>
-                    <a href="/class-7" class="btn btn-card">Explore Class 7 <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+        .section { padding: 4.5rem 0; }
+        .text-center { text-align: center; }
 
-                <!-- Class 8 Card -->
-                <div class="glass-card class-card">
-                    <div class="card-badge bg-blue">Class 8</div>
-                    <h3>Class 8 Study Material</h3>
-                    <p class="urdu-font card-urdu">جماعت ہشتم - مکمل تعلیمی مواد</p>
-                    <ul class="card-features">
-                        <li><i class="fa-solid fa-check text-green"></i> Scholarship Exam Prep</li>
-                        <li><i class="fa-solid fa-check text-green"></i> MCQ Question Banks</li>
-                    </ul>
-                    <a href="/class-8" class="btn btn-card">Explore Class 8 <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+        /* Typography Headings */
+        h1, h2, h3, h4 { color: var(--text-primary); font-weight: 800; letter-spacing: -0.02em; }
+        h1 { font-size: 2.6rem; line-height: 1.2; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.3rem; }
 
-                <!-- Class 9 Card -->
-                <div class="glass-card class-card">
-                    <div class="card-badge bg-blue">Class 9</div>
-                    <h3>Class 9 Study Material</h3>
-                    <p class="urdu-font card-urdu">جماعت نہم - سوال و جواب</p>
-                    <ul class="card-features">
-                        <li><i class="fa-solid fa-check text-green"></i> Science Practical Guide</li>
-                        <li><i class="fa-solid fa-check text-green"></i> Language Notes</li>
-                    </ul>
-                    <a href="/class-9" class="btn btn-card">Explore Class 9 <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-                <!-- Class 10 Card -->
-                <div class="glass-card class-card featured-card">
-                    <div class="card-badge bg-green">SSC Special</div>
-                    <h3>SSC Class 10 Study Material</h3>
-                    <p class="urdu-font card-urdu">جماعت دہم - ایس ایس سی بورڈ تیاری</p>
-                    <ul class="card-features">
-                        <li><i class="fa-solid fa-check text-green"></i> Model Answer Papers</li>
-                        <li><i class="fa-solid fa-check text-green"></i> Board Exam Important Questions</li>
-                    </ul>
-                    <a href="/ssc-class-10" class="btn btn-primary">Explore SSC Class 10 <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            box-shadow: var(--shadow-glass);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
-    <!-- Section: Choose Subject -->
-    <section class="section subjects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Browse by Subjects</h2>
-                <p>Complete course material structured per subject standard.</p>
-            </div>
+        .glass-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
 
-            <div class="grid grid-3">
-                <a href="/subjects/urdu" class="glass-card subject-card">
-                    <div class="subject-icon icon-green"><i class="fa-solid fa-language"></i></div>
-                    <div>
-                        <h3>Urdu (اردو)</h3>
-                        <p>Grammar, Prose, Poetry & Workbook Answers</p>
-                    </div>
-                </a>
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
 
-                <a href="/subjects/mathematics" class="glass-card subject-card">
-                    <div class="subject-icon icon-blue"><i class="fa-solid fa-calculator"></i></div>
-                    <div>
-                        <h3>Mathematics (ریاضی)</h3>
-                        <p>Algebra & Geometry step-by-step solutions</p>
-                    </div>
-                </a>
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: #ffffff !important;
+        }
 
-                <a href="/subjects/science" class="glass-card subject-card">
-                    <div class="subject-icon icon-green"><i class="fa-solid fa-flask"></i></div>
-                    <div>
-                        <h3>Science & Tech (سائنس اور ٹیکنالوجی)</h3>
-                        <p>Diagrams, Experiments & Conceptual Notes</p>
-                    </div>
-                </a>
+        .btn-primary:hover {
+            opacity: 0.92;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+        }
 
-                <a href="/subjects/english" class="glass-card subject-card">
-                    <div class="subject-icon icon-blue"><i class="fa-solid fa-book"></i></div>
-                    <div>
-                        <h3>English Medium Course</h3>
-                        <p>My English Coursebook notes & writing skills</p>
-                    </div>
-                </a>
+        .btn-secondary {
+            background: rgba(2, 132, 199, 0.12);
+            color: var(--accent-blue) !important;
+            border: 1px solid rgba(2, 132, 199, 0.25);
+        }
 
-                <a href="/subjects/marathi" class="glass-card subject-card">
-                    <div class="subject-icon icon-green"><i class="fa-solid fa-pen-nib"></i></div>
-                    <div>
-                        <h3>Marathi & Hindi (مراٹھی / ہندی)</h3>
-                        <p>Aksharbhati, Sugambhati solutions & Vyakaran</p>
-                    </div>
-                </a>
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+            color: #ffffff !important;
+        }
 
-                <a href="/subjects/social-science" class="glass-card subject-card">
-                    <div class="subject-icon icon-blue"><i class="fa-solid fa-globe"></i></div>
-                    <div>
-                        <h3>History & Geography (تاریخ و جغرافیہ)</h3>
-                        <p>Maps, Timelines & Objective Question Banks</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            margin-bottom: 1rem;
+        }
 
-    <!-- Section: Chapter-wise Notes & Resources Grid -->
-    <section class="section resources-section" id="free-pdfs">
-        <div class="container">
-            <div class="section-header">
-                <h2>Chapter-wise Notes & Free Study Resources</h2>
-                <p>High-yield exam preparation content optimized for search engine rankings.</p>
-            </div>
+        /* ==========================================================================
+           HEADER & NAVIGATION
+           ========================================================================== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+        }
 
-            <div class="grid grid-3">
-                <div class="glass-card resource-box">
-                    <h3><i class="fa-solid fa-file-lines text-blue"></i> Chapter-wise Notes</h3>
-                    <p>Structured, easy-to-understand study material written by expert Urdu medium teachers.</p>
-                    <a href="/chapter-wise-notes" class="link-btn">Access Notes <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 75px;
+        }
 
-                <div class="glass-card resource-box">
-                    <h3><i class="fa-solid fa-circle-check text-green"></i> Practice MCQs</h3>
-                    <p>Interactive multiple-choice quizzes designed to improve exam speed and accuracy.</p>
-                    <a href="/practice-mcqs" class="link-btn">Start Practice <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
 
-                <div class="glass-card resource-box">
-                    <h3><i class="fa-solid fa-clock-rotate-left text-blue"></i> Previous Year Question Papers</h3>
-                    <p>Download previous 5-year SSC board question papers with official answer keys.</p>
-                    <a href="/previous-year-papers" class="link-btn">Download Papers <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+        .logo-icon {
+            background: var(--primary-gradient);
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
 
-    <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common queries about Maharashtra Board Urdu Medium resources.</p>
-            </div>
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
 
-            <div class="faq-container">
-                <div class="faq-item glass-card">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Are these notes updated for the latest Maharashtra Board syllabus?</span>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, all content on Maharashtra Study Point is curated according to the updated syllabus published by the Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE).</p>
-                    </div>
-                </div>
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.25s ease;
+        }
 
-                <div class="faq-item glass-card">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Are all study materials and PDFs free to download?</span>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. We provide free PDF notes, practice questions, and sample papers for all students without any subscription fees.</p>
-                    </div>
-                </div>
+        .nav-link:hover, .nav-link.active { color: var(--accent-blue); }
 
-                <div class="faq-item glass-card">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>How can I get Maharashtra Board SSC Class 10 Urdu Medium Model Papers?</span>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-        
+        .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+        .icon-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid var(--border-glass);
+            color: var(--text-primary);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .icon-btn:hover { background: var(--accent-blue); color: white; }
+        .mobile-menu-btn { display: none; }
+
+        /* Breadcrumb */
+        .breadcrumb-bar {
+            background: rgba(0,0,0,0.02);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.6rem 0;
+            font-size: 0.85rem;
+        }
+        .breadcrumb-bar a { text-decoration: none; color: var(--accent-blue); font-weight: 600; }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        .hero { padding: 4rem 0 2rem; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-title { margin-bottom: 1rem; }
+        .hero-desc { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-main-card {
+            width: 100%;
+            height: 340px;
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.15), rgba(16, 185, 129, 0.15));
+            border-radius: var(--radius-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 2px solid var(--border-glass);
+        }
+
+        .hero-illustration-icon {
+            font-size: 6.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 10px 15px rgba(2, 132, 199, 0.2));
+        }
+
+        .floating-pill {
+            position: absolute;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 50px;
+            box-shadow: var(--shadow-glass);
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .float-1 { top: 15px; left: -10px; color: var(--accent-purple); }
+        .float-2 { bottom: 20px; right: -10px; color: var(--accent-green); animation-delay: 2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ==========================================================================
+           SEARCH SECTION
+           ========================================================================== */
+        .search-box {
+            margin-top: -1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .search-inner {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--bg-card);
+            padding: 0.6rem 0.6rem 0.6rem 1.25rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--border-glass);
+            box-shadow: var(--shadow-glass);
+        }
+
+        .search-inner input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        .search-inner i { font-size: 1.2rem; color: var(--accent-blue); }
+
+        /* ==========================================================================
+           CLASS SELECTION CARDS
+           ========================================================================== */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+
+        .class-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .class-card-header {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .c-7 { background: linear-gradient(135deg, #0284c7, #38bdf8); }
+        .c-8 { background: linear-gradient(135deg, #0d9488, #34d399); }
+        .c-9 { background: linear-gradient(135deg, #8b5cf6, #c084fc); }
+        .c-10 { background: linear-gradient(135deg, #f97316, #fbbf24); }
+
+        .card-link {
+            margin-top: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .card-link:hover { gap: 0.7rem; }
+
+        /* ==========================================================================
+           SUBJECT GRID (Vibrant Colors)
+           ========================================================================== */
+        .subject-card {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .subject-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .s-urdu { background: linear-gradient(135deg, #10b981, #059669); }
+        .s-english { background: linear-gradient(135deg, #0284c7, #2563eb); }
+        .s-marathi { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .s-hindi { background: linear-gradient(135deg, #f97316, #ea580c); }
+        .s-maths { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .s-science { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+        .s-history { background: linear-gradient(135deg, #eab308, #ca8a04); }
+        .s-geography { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+
+        /* ==========================================================================
+           CONTENT CARDS & LISTS
+           ========================================================================== */
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            width: max-content;
+            margin-bottom: 0.75rem;
+        }
+
+        .tag-blue { background: rgba(2, 132, 199, 0.15); color: var(--accent-blue); }
+        .tag-green { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+        .tag-orange { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ==========================================================================
+           FAQS & ACCORDION
+           ========================================================================== */
+        .faq-item {
+            cursor: pointer;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, margin-top 0.35s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 0.75rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--accent-green);
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-glass);
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--accent-blue); }
+
+        .social-icons { display: flex; gap: 0.75rem; margin-top: 1.25rem; }
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(2, 132, 199, 0.1);
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover { background: var(--accent-blue); color: white; transform: translateY(-3px); }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                positio
